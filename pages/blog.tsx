@@ -1,21 +1,19 @@
 import type { NextPage } from 'next'
-import React, { useState } from 'react';
 import Head from 'next/head'
+import BlogDetails from '../components/blog/BlogDetails'
 import Navbar from '../components/Navbar'
-import HomeMain from '../components/home/HomeMain';
 
-const Home: NextPage = () => {
-
+const Profile: NextPage = () => {
   return (
     <div className="min-h-screen bg-[#FFFFFF]">
       <Head>
         <title>Ai Bisda</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar/>
-      <HomeMain />
+      <Navbar />
+      <BlogDetails />
     </div>
   )
 }
 
-export default Home
+export default Profile
