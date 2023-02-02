@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
-import TitleSection from '../question/TitleSection'
+import TitleSection from './TitleSection'
 
 const BlogDetails: NextPage = () => {
     return (
         <div>
-            <div className="h-[720px] bg-[#C4C4C4]">
+            <div className="h-[360px] bg-[#C4C4C4]">
 
             </div>
             <div className='container mx-auto grid-cols-12'>

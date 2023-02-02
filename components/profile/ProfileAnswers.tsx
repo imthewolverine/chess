@@ -10,7 +10,7 @@ const ProfileAnswers: NextPage = () => {
             <div className='col-span-8'>
                 <div className='mb-[50px]'>
                     <p className='font-PT-Serif text-[#272343] font-extrabold text-[42px] leading-[76.8px]'>Answers</p>
-                    <div className='w-[114px] h-[4px] border-2 border-[#1E90FF]'></div>
+                    <div className='w-[114px] h-[4px] border-b-4 border-[#1E90FF]'></div>
                 </div>
                 <div className='flex flex-col gap-10'>
                     <div>
