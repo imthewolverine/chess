@@ -11,7 +11,7 @@ const Navbar: NextPage = () => {
                     <div className='text-[#272343] font-PT-Serif-Caption'>Bisda</div>
                 </div>
                 <div className='flex bg-[#F5F5F5] items-center'>
-                    <input placeholder='Search here...' className='bg-[#F5F5F5] w-[424px] h-12 px-11 text-[16px]'/>
+                    <input placeholder='Search here...' className='bg-[#F5F5F5] w-[424px] h-12 px-11 text-[16px] hover:border-black hover:border-2'/>
                     <div className='text-[#272343] pl-4 absolute'>
                         <CiSearch className='h-[24px] w-[24px] font-bold'/>
                     </div>
