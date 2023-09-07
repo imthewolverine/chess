@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import ProfileMain from '../components/home/ProfileMain'
+import GroupProfileMain from '../components/home/GroupProfileMain'
 import Navbar from '../components/Navbar'
 
-const Profile: NextPage = () => {
+const GroupProfile: NextPage = () => {
   return (
     <div className="min-h-screen bg-[#FFFFFF]">
       <Head>
@@ -11,9 +11,9 @@ const Profile: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <ProfileMain />
+      <GroupProfileMain />
     </div>
   )
 }
 
-export default Profile
+export default GroupProfile

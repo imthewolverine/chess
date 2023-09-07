@@ -1,7 +1,4 @@
 import type { NextPage } from 'next'
-import BlogCard from '../blog/BlogCard'
-import QuestionCard from '../question/QuestionCard'
-import AnswerCard from '../answer/AnswerCard'
 import Link from 'next/link'
 
 const ProfileAbout: NextPage = () => {

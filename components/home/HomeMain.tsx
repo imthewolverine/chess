@@ -1,34 +1,27 @@
 import React, { useState } from 'react';
 import type { NextPage } from 'next'
-import AnswerMain from './AnswerMain'
-import BlogMain from './BlogMain'
 import Link from 'next/link'
+import Home from '../menu/Home';
 
 const HomeMain: NextPage = () => {
-  const [currentPage, setCurrentPage] = useState("blog");
-  
-  function handleClick(page: string) {
-    setCurrentPage(page);
-  }
-  function setNavigateClass(setClass: string) {
-    return (setClass === currentPage ? ' text-[#1E90FF] border-[#1E90FF] border-b-2 py-[5px]' : '');
-  }
   
   return (
-    <div className='container mx-auto grid grid-cols-12 gap-6 my-[50px]'>
-        <div className='col-span-3'>
-            <div className='bg-[#D9D9D9] h-[1176px]'></div>
+    <div className='mr-4 grid grid-cols-12 gap-4 my-[40px]'>
+        <div className='pl-4 pr-4 col-span-2'>
+            <div className='flex-row space-y-3 z-30'>
+                <div className='p-3 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee]'>Нүүр хуудас</div>
+                <div className='p-3 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee]'>Үйл ажиллагаа</div>
+                <div className='p-3 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee]'>Хуваарь</div>
+                <div className='p-3 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee]'>Бодлого</div>
+                <div className='p-3 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee]'>Онооны самбар</div>
+                <div className='p-3 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee]'>Санал асуулга</div>
+                <div className='p-3 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee]'>Санал хүсэлт</div>
+                <div className='p-3 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee]'>Төлбөр</div>
+                <div className='p-3 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee] text-[#EB654B]'>Гарах</div>
+            </div>
         </div>
-        <div className='col-span-8'>
-            <div className='h-[148px] bg-[#D9D9D9] mb-[50px]'>
-            </div>
-            <div className='flex text-[16px] text-[#6D7280]'>
-              <button className={'px-3 hover:text-[#1E90FF] '+setNavigateClass('blog')} onClick={() => handleClick("blog")}>Blog</button>
-              <button className={'px-3 hover:text-[#1E90FF] '+setNavigateClass('answer')} onClick={() => handleClick("answer")}>Answer</button>
-            </div>
-            <div>
-              {currentPage === 'blog' ? <BlogMain /> : <AnswerMain />}
-            </div>
+        <div className='col-span-10 grid grid-cols-10 gap-4'>
+            <Home />
         </div>
     </div>
   )
