@@ -31,7 +31,7 @@ const HomeMain: NextPage = () => {
                     <div className='p-3 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee] text-[#EB654B]'>Гарах</div>
                 </div>
             </div>
-            <div className='col-span-10 grid grid-cols-10 gap-4'>
+            <div className='col-span-10'>
                 {currentPage === 'Home' ? <Home /> : ""}
                 {currentPage === 'Activity' ? <Activity /> : ""}
                 {currentPage === 'Schedule' ? <Schedule /> : ""}
