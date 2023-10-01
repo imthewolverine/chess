@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import LeaderBoardElement from '../molecules/leaderBoardElement';
+import LeaderBoardElement from '../../components/molecules/leaderBoardElement';
 
 const LeaderBoard: NextPage = () => {
 

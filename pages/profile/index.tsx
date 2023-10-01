@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import ProfileMain from '../components/home/ProfileMain'
-import Navbar from '../components/Navbar'
+import ProfileMain from '../../components/home/ProfileMain'
+import Navbar from '../../components/Navbar'
 import Image from 'next/image'
 import backgroundPic from '../images/background.jpeg'
 
