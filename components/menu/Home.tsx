@@ -16,6 +16,7 @@ const NavHome: NextPage = () => {
             </div>
         </div>
         <div className='col-span-3'>
+            {/*Засах хэсэг Хувийн мэдээлэл*/}
             <div className='p-4 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee]'>
                 <div className='flex space-x-4 items-center'>
                     <div className='w-16 h-16 rounded-full bg-[#C4C4C4]'></div>
