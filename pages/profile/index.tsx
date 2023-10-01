@@ -3,7 +3,7 @@ import Head from 'next/head'
 import ProfileMain from '../../components/home/ProfileMain'
 import Navbar from '../../components/Navbar'
 import Image from 'next/image'
-import backgroundPic from '../images/background.jpeg'
+import backgroundPic from '../background.jpeg'
 
 const Profile: NextPage = () => {
   return (

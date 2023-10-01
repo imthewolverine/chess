@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import type { NextPage } from 'next'
 import Link from 'next/link'
 
-const Home: NextPage = () => {
+const NavHome: NextPage = () => {
 
   return (
     <div className='grid grid-cols-10 gap-4'>
@@ -40,4 +40,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default NavHome

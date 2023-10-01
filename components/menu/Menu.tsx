@@ -6,7 +6,7 @@ const Menu: NextPage = () => {
 
   return (
     <div className='flex-row z-30'>
-        <Link href="/"><div className='my-3 p-3 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee]'>Нүүр хуудас</div></Link>
+        <Link href="/Home"><div className='mb-3 p-3 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee]'>Нүүр хуудас</div></Link>
         <Link href="/Activity"><div className='my-3 p-3 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee]'>Үйл ажиллагаа</div></Link>
         <Link href="/Schedule"><div className='my-3 p-3 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee]'>Хуваарь</div></Link>
         <Link href="/Puzzle"><div className='my-3 p-3 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee]'>Бодлого</div></Link>

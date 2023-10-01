@@ -14,7 +14,7 @@ const Payment: NextPage = () => {
             <div className='col-span-4'>
                 <div className='p-4 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee]'>
                     <div className='text-[22px] pb-3 font-medium'>Төлбөр</div>
-                        <table className='w-full border-collapse border border-slate-400'>
+                        <table className='w-full border-collapse border border-slate-400 '>
                             <thead className='bg-[#808080]'>
                                 <th className='border border-slate-300 py-3'>Банк</th>
                                 <th className='border border-slate-300'>Дансны дугаар</th>
