@@ -19,7 +19,7 @@ const Home: NextPage = () => {
     const router = useRouter();
     const navName = router.query.navName;
     return (
-        <div className="min-h-screen">
+        <div className="">
             <Head>
                 <title>Chess</title>
                 <link rel="icon" href="/favicon.ico" />

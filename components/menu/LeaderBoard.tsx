@@ -6,18 +6,17 @@ import LeaderBoardElement from '../molecules/leaderBoardElement';
 const LeaderBoard: NextPage = () => {
 
     return (
-    <div className='col-span-10 overflow-auto'>
-        <table className='w-full'>
-            <thead className='bg-[#808080]'>
-                <th className='py-4'>Байр</th>
-                <th className='py-4'>Нэр</th>
-                <th className='py-4'>Sisi ID</th>
-                <th className='py-4'>Түвшин</th>
-                <th className='py-4'>Rating</th>
-                <th className='py-4'>Оноо</th>
+    <div className=' rounded-xl shadow-special bg-[#eeeeee] bg-opacity-70 overflow-hidden mr-[220px]'>
+        <table className='w-full overflow-auto'> 
+            <thead className='bg-[#3B4354] text-white'>
+                <th className='py-4 font-semibold text-lg'>Байр</th>
+                <th className='py-4 font-semibold text-lg'>Нэр</th>
+                <th className='py-4 font-semibold text-lg'>Sisi ID</th>
+                <th className='py-4 font-semibold text-lg'>Түвшин</th>
+                <th className='py-4 font-semibold text-lg'>Rating</th>
+                <th className='py-4 font-semibold text-lg'>Оноо</th>
             </thead>
             <tbody>
-                <LeaderBoardElement />
                 <LeaderBoardElement />
                 <LeaderBoardElement />
                 <LeaderBoardElement />

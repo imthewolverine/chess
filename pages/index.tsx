@@ -10,7 +10,7 @@ import NavHome from '../components/menu/Home';
 const Home: NextPage = () => {
 
   return (
-    <div className="min-h-screen">
+    <div className="h-full">
       <Head>
         <title>Chess</title>
         <link rel="icon" href="/favicon.ico" />
