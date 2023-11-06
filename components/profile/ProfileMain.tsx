@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import React, { useState } from 'react';
-import ProfileAbout from '../profile/ProfileAbout';
-import ProfileBlogs from '../profile/ProfileBlogs'
-import ProfileLesson from '../profile/ProfileLesson'
+import ProfileAbout from './ProfileAbout';
+import ProfileBlogs from './ProfileActivity'
+import ProfileLesson from './ProfileAddMember'
 import { AiFillCaretDown } from 'react-icons/ai'
 const ProfileMain: NextPage = () => {
 
@@ -42,9 +42,9 @@ const ProfileMain: NextPage = () => {
         </div>
       </div>
       <div>
-        {profileTypes==='Blogs' && <ProfileBlogs />}
-        {profileTypes==='Questions' && <ProfileLesson />}
-        {profileTypes==='About' && <ProfileAbout />}
+        {addName==='Blogs' && <ProfileBlogs />}
+        {addName==='Questions' && <ProfileLesson />}
+        {addName==='About' && <ProfileAbout />}
       </div>
       
     </div>

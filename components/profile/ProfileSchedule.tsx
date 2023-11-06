@@ -1,6 +1,6 @@
+import type { NextPage } from 'next'
 'use client'
 import React, { Fragment, useEffect, useState } from 'react';
-import type { NextPage } from 'next'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin, { Draggable, DropArg } from '@fullcalendar/interaction'
@@ -9,8 +9,6 @@ import { Dialog, Transition } from '@headlessui/react'
 import { CheckIcon, ExclamationTriangleIcon } from '@heroicons/react/20/solid'
 import { EventSourceInput } from '@fullcalendar/core/index.js'
 
-
-
 interface Event {
     title: string;
     start: Date | string;
@@ -18,54 +16,78 @@ interface Event {
     id: number;
   }
 
-const Schedule: NextPage = () => {
-    
-      const [allEvents, setAllEvents] = useState<Event[]>([])
-      const [showModal, setShowModal] = useState(false)
-      const [showDeleteModal, setShowDeleteModal] = useState(false)
-      const [idToDelete, setIdToDelete] = useState<number | null>(null)
-      const [newEvent, setNewEvent] = useState<Event>({
+const ProfileSchedule: NextPage = () => {
+    const [allEvents, setAllEvents] = useState<Event[]>([])
+    const [showModal, setShowModal] = useState(false)
+    const [showDeleteModal, setShowDeleteModal] = useState(false)
+    const [idToDelete, setIdToDelete] = useState<number | null>(null)
+    const [newEvent, setNewEvent] = useState<Event>({
+      title: '',
+      start: '',
+      allDay: false,
+      id: 0
+    })
+  
+  
+    function handleDateClick(arg: { date: Date, allDay: boolean }) {
+      setNewEvent({ ...newEvent, start: arg.date, allDay: arg.allDay, id: new Date().getTime() })
+      setShowModal(true)
+    }
+  
+    function addEvent(data: DropArg) {
+      const event = { ...newEvent, start: data.date.toISOString(), title: data.draggedEl.innerText, allDay: data.allDay, id: new Date().getTime() }
+      setAllEvents([...allEvents, event])
+    }
+  
+    function handleDeleteModal(data: { event: { id: string } }) {
+      setShowDeleteModal(true)
+      setIdToDelete(Number(data.event.id))
+    }
+  
+    function handleDelete() {
+      setAllEvents(allEvents.filter(event => Number(event.id) !== Number(idToDelete)))
+      setShowDeleteModal(false)
+      setIdToDelete(null)
+    }
+  
+    function handleCloseModal() {
+      setShowModal(false)
+      setNewEvent({
         title: '',
         start: '',
         allDay: false,
         id: 0
       })
-
-    
-      function handleCloseModal() {
-        setShowModal(false)
-        setNewEvent({
-          title: '',
-          start: '',
-          allDay: false,
-          id: 0
-        })
-        setShowDeleteModal(false)
-        setIdToDelete(null)
-      }
-    
-      const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-        setNewEvent({
-          ...newEvent,
-          title: e.target.value
-        })
-      }
-    
-      function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-        e.preventDefault()
-        setAllEvents([...allEvents, newEvent])
-        setShowModal(false)
-        setNewEvent({
-          title: '',
-          start: '',
-          allDay: false,
-          id: 0
-        })
-      }
-    
-      return (
-        <>
-            <div className="px-20">
+      setShowDeleteModal(false)
+      setIdToDelete(null)
+    }
+  
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+      setNewEvent({
+        ...newEvent,
+        title: e.target.value
+      })
+    }
+  
+    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+      e.preventDefault()
+      setAllEvents([...allEvents, newEvent])
+      setShowModal(false)
+      setNewEvent({
+        title: '',
+        start: '',
+        allDay: false,
+        id: 0
+      })
+    }
+  return (
+    <div className="container mx-auto">
+        <div className='mb-[50px]'>
+          <p className='text-[#272343] font-semibold text-[32px] leading-[76.8px]'>Хуваарь шинэчлэх</p>
+          <div className='w-[114px] h-[4px] border-b-4 border-[#1E90FF]'></div>
+        </div>
+        <div className='gap-6'>
+            <div className="px-20 pb-20">
               <FullCalendar
                 height={550}
                 plugins={[
@@ -84,7 +106,10 @@ const Schedule: NextPage = () => {
                 droppable={true}
                 selectable={true}
                 selectMirror={true}
-                viewClassNames="bg-white bg-opacity-30 rounded-xl overflow-hidden"
+                dateClick={handleDateClick}
+                drop={(data) => addEvent(data)}
+                eventClick={(data) => handleDeleteModal(data)}
+                viewClassNames="shadow-special rounded-xl overflow-hidden"
               />
             </div>
             
@@ -138,7 +163,7 @@ const Schedule: NextPage = () => {
                         </div>
                         <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                           <button type="button" className="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm 
-                          font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">
+                          font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto" onClick={handleDelete}>
                             Устгах
                           </button>
                           <button type="button" className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 
@@ -223,8 +248,10 @@ const Schedule: NextPage = () => {
                 </div>
               </Dialog>
             </Transition.Root>
-        </>
-      )
+        
+        </div>
+    </div>
+  )
 }
 
-export default Schedule
+export default ProfileSchedule

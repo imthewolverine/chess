@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import type { NextPage } from 'next'
 import Link from 'next/link'
+import { MdCardMembership, MdOutlinePermIdentity, MdOutlineSchool } from 'react-icons/md'
+import { AiOutlinePhone, AiOutlineTrophy } from 'react-icons/ai';
+import { GiRank3 } from 'react-icons/gi'
 
 const NavHome: NextPage = () => {
 
@@ -18,22 +21,23 @@ const NavHome: NextPage = () => {
         <div className='col-span-3'>
             {/*Засах хэсэг Хувийн мэдээлэл*/}
             <div className='p-4 border border-[#D9D9D9] rounded-xl shadow-special bg-[#eeeeee]'>
-                <div className='flex space-x-4 items-center'>
-                    <div className='w-16 h-16 rounded-full bg-[#C4C4C4]'></div>
-                    <div className='flex-row text-[20px]'>
-                        <div>Баттулга</div>
-                        <div>Батлхагва</div>
+                <div className='text-xl font-medium border-b border-gray-600 pb-1'>Хувийн мэдээлэл</div>
+                <div className='flex space-x-4 items-center pt-2'>
+                    {/*<div className='w-16 h-16 rounded-full bg-[#C4C4C4]'></div>*/}
+                    <div className='flex-row text-[18px]'>
+                            <div>Баттулга</div>
+                            <div className=''>Батлхагва</div>
                     </div>
                 </div>
-                <div className='space-y-3'>
+                <div className='space-y-2'>
                     <div></div>
-                    <div>20b1num1562</div>
-                    <div>ХШИУС</div>
-                    <div>80553609</div>
-                    <div>1980</div>
-                    <div>Ахисан дунд</div>
-                    <div>Гишүүн</div>
-                    <div></div>
+                    <div className='flex items-center'><MdOutlinePermIdentity className='mr-2 text-lg'/> 20b1num1562</div>
+                    <div className='flex items-center'><MdOutlineSchool className='mr-2 text-lg'/> ХШИУС</div>
+                    <div className='flex items-center'><AiOutlinePhone className='mr-2 text-lg'/> 80553609</div>
+                    <div className='flex items-center'><AiOutlineTrophy className='mr-2 text-lg'/> 1980</div>
+                    <div className='flex items-center'><GiRank3 className='mr-2 text-lg'/> Ахисан дунд</div>
+                    <div className='flex items-center'><MdCardMembership className='mr-2 text-lg'/> Гишүүн</div>
+                    <div className='flex items-center'></div>
                 </div>
             </div>
         </div>
