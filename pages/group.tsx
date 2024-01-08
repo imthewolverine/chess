@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import GroupProfileMain from '../components/home/GroupProfileMain'
 import Navbar from '../components/Navbar'
 
 const GroupProfile: NextPage = () => {
@@ -11,7 +10,7 @@ const GroupProfile: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <GroupProfileMain />
+      Test end 1 yum olj hiinedee
     </div>
   )
 }
