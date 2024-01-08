@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import ProfileMain from '../../components/profile/ProfileMain'
 import Navbar from '../../components/Navbar'
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
