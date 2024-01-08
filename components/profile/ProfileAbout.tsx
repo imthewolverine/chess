@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import ChangeAbout from './molecules/ChangeAbout'
+import ChangeAbout from './molecules/ChangeAbout.js'
 
 const ProfileAbout: NextPage = () => {
     return (

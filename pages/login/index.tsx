@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import backgroundPic from '../../images/background.jpeg'
+import backgroundPic from '../../images/download.jpeg'
 import logoPic from '../../images/NumChessClubLogo.png'
 import Image from 'next/image'
 const Login: NextPage = () => {
@@ -25,11 +25,11 @@ const Login: NextPage = () => {
                     <button type='submit' className='bg-blue-500 font-semibold text-white py-2 px-4 border rounded-xl w-full hover:bg-blue-700'>Нэвтрэх</button>
                 </div>
             </div>
-            <div className='col-span-5 h-screen'>
+            <div className='col-span-5 h-screen w-screen object-fill'>
                 <Image 
-                  className='-z-10 opacity-80'
+                  className=''
                   src={backgroundPic}
-                  layout='fill'
+                  layout=''
                   alt="background"
                   objectFit='cover'
                   objectPosition='center'
